@@ -1,0 +1,14 @@
+# Do NOT commit the encrypted seed
+encrypted_seed.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments (optional if you use one)
+venv/
+.env
+
+# IDE / editor settings (optional but helpful)
+.vscode/
+.idea/
