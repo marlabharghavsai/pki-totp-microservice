@@ -1,14 +1,25 @@
-# Do NOT commit the encrypted seed
+# Encrypted seed (sensitive - MUST NOT be committed)
 encrypted_seed.txt
 
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Virtual environments (optional if you use one)
+# Virtual environments
 venv/
+env/
+
+# Environment variables
 .env
 
-# IDE / editor settings (optional but helpful)
+# IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
