@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: pki-2fa-app
+
+    # Build configuration
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Port mapping
+    ports:
+      - "8080:8080"
+
+    # Volume mounts
+    volumes:
+      - seed-data:/data
+      - cron-output:/cron
+      - ./student_private.pem:/app/student_private.pem:ro
+      - ./student_public.pem:/app/student_public.pem:ro
+      - ./instructor_public.pem:/app/instructor_public.pem:ro
+
+    # Environment variables
+    environment:
+      - TZ=UTC
+
+    # Restart policy
+    restart: unless-stopped
+
+
+volumes:
+  seed-data:
+  cron-output:
